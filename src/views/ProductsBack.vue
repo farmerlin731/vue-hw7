@@ -74,11 +74,11 @@ export default {
         username: "",
         password: "",
       },
-      // 全部產品列表
       products: [],
       isNew: false,
       pages: {},
       tmpProd: { imagesUrl: [] },
+      //-- test data --
       fakeData: {
         category: "測試分類",
         content: "測試的newwww0209",
@@ -133,8 +133,8 @@ export default {
     openModal(type, item) {
       const prodModalComp = this.$refs.productModal;
       const delModalComp = this.$refs.delModal;
-      this.tmpProd = item ? { ...item } : { ...this.fakeData };
-      // this.tmpProd = item ? { imagesUrl: [], ...item } : { imagesUrl: [] };
+      // this.tmpProd = item ? { ...item } : { ...this.fakeData };
+      this.tmpProd = item ? { imagesUrl: [], ...item } : { imagesUrl: [] };
 
       if (type == "add") {
         this.isNew = true;
